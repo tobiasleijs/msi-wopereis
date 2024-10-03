@@ -1,0 +1,13 @@
+body{
+margin-left: 50px;
+margin-right: 50px;
+background-color:rgb(194, 236, 247);
+
+}
+
+
+.box-2{
+	border:3px dotted #f01212;
+	padding:20px;
+	margin:20px 0;
+}
