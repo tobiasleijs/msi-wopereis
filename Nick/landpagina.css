@@ -1,11 +1,11 @@
+/* Dit is het bestand maar dan in het algemeen */
 body{
 margin-left: 50px;
 margin-right: 50px;
 background-color:rgb(255, 255, 255);
-
 }
 
-
+/* Dit is voor de blauwe box*/
 .box-2{
 background-color: #0259a1;
 color: rgb(226, 241, 255);
@@ -14,3 +14,4 @@ color: rgb(226, 241, 255);
 	padding:20px;
 	margin:20px 0;
 }
+
