@@ -8,10 +8,15 @@ background-color:rgb(255, 255, 255);
 /* Dit is voor de blauwe box*/
 .box-2{
 background-color: #0259a1;
-color: rgb(226, 241, 255);
+color: rgb(255, 255, 255);
 
 	border:12px double rgb(0, 0, 0);
 	padding:20px;
 	margin:20px 0;
 }
 
+.fotocarousel{
+width: 60%;
+margin: auto
+
+}
