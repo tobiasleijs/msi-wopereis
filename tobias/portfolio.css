@@ -1,0 +1,89 @@
+.card {
+    border-radius: 10px;
+    position: relative;
+    width: 40vmin;
+    height: 56vmin;
+    background-color: rgb(30, 29, 29);
+}
+
+.cardimage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% 50%;
+    border-radius: 10px;
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.card:hover::after,
+.card:hover::before,
+.scrollable-modal::after,
+.scrollable-modale::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+
+.card:hover::before,
+.scrollable-modale::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+.scrollable-modal {
+    height: 80vh;
+    width: 80vw;
+    border-radius: 24px;
+    padding: 3px;
+    position: relative;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    animation: 3s spin linear infinite;
+    z-index: -1;
+}
+
+.modal-content {
+    --content-padding: 8px;
+    background-color: black;
+    width: calc(100% - var(--content-padding) * 2);
+    height: calc(100% - var(--content-padding) * 2);
+    border-radius: 24px;
+    padding: var(--content-padding);
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.modal-scroll-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
