@@ -21,3 +21,36 @@ margin: auto;
 border: 8px solid #0259a1
 
 }
+
+/* Inleiding*/
+.box-1{
+	background-color: #ffffff;
+	color: rgb(0, 0, 0);
+	
+		border:8px double #0259a1;
+		padding:5px;
+		margin:0px;
+		margin-right:38%;
+}
+
+/* Foto bij inleiding*/
+.container{
+display: flex;
+            justify-content: space-between;
+            align-items: center;
+}
+.container img {
+				max-width: 300px; /* Pas de grootte van de afbeelding aan */
+				height: auto;
+				margin-top: 40px;
+			}
+.text {
+				flex-grow: 1;
+				margin-right: 80px; /* Afstand tussen de tekst en de afbeelding */
+				border:8px double #0259a1;
+				padding:20px;
+				margin-top: 40px;
+				
+}
+
+/* Opmaak van de BTN-Group zit in de tekst verwerkt*
