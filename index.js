@@ -2,7 +2,6 @@ const track = document.getElementById("image-track");
 
 window.onmousedown = e => {
     track.dataset.mouseDownAt = e.clientX;
-    console.log(track.dataset.mouseDownAt);
 }
 
 window.onmousemove = e => {
@@ -20,6 +19,9 @@ window.onmousemove = e => {
     }, { duration: 1200, fill: "forwards" });
 
     for (const image of track.getElementsByClassName("image")) {
+        image.animate({ objectPosition: `${100 + nextPercentage}% center` }, { duration: 1200, fill: "forwards" });
+    }
+    for (const image of track.getElementsByClassName("cardimage")) {
         image.animate({ objectPosition: `${100 + nextPercentage}% center` }, { duration: 1200, fill: "forwards" });
     }
 }

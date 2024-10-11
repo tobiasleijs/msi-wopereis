@@ -9,22 +9,20 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Project</a></li>
-                <li><a href="Nick/landpagina.html" target="_blank">Nick</a></li>
-                <li><a href="#">Timme</a></li>
-                <li><a href="#">Tobias</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('global/header.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('header-placeholder').innerHTML = html;
+            })
+            .catch(err => console.error('Failed to load header: ', err));
+    </script>
     <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
         <img class="image"
             src="https://wopereis.group/wp-content/uploads/2024/07/foto-jubilaris-pensionado-5-1080x675.png"
             draggable="false" />
-        <img class="image" src="images/smart_tech.jpeg" draggable="false" />
+        <img class="image" src="tobias/assets/images/smart_tech.jpeg" draggable="false" />
         <img class="image"
             src="https://images.unsplash.com/photo-1726441742327-746b1e0d431e?q=80&w=2274&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             draggable="false" />
