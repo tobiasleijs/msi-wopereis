@@ -10,13 +10,14 @@ background-color:rgb(255, 255, 255);
 background-color: #0259a1;
 color: rgb(255, 255, 255);
 
-	border:12px double rgb(0, 0, 0);
+	border:8px double rgb(255, 255, 255);
 	padding:20px;
-	margin:20px 0;
+	margin-top:10px;
 }
 
 .fotocarousel{
 width: 60%;
-margin: auto
+margin: auto;
+border: 8px solid #0259a1
 
 }
