@@ -12,14 +12,17 @@
 <body>
     <!-- PAGE NAVIGATION FOOTER -->
     <div id="header-placeholder"></div>
-    <script>
-        fetch('../global/header.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('header-placeholder').innerHTML = html;
-            })
-            .catch(err => console.error('Failed to load header: ', err));
-    </script>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="../Nick/landpagina.html" target="_blank">Nick</a></li>
+                <li><a href="#">Timme</a></li>
+                <li><a href="portfolio.html">Tobias</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- MODAL -->
     <dialog data-modal class="scrollable-modal">
@@ -37,13 +40,13 @@
 
     <!-- PAGE CONTENT -->
     <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-        <div class="card" html-content-file="/tobias/courses/smart-connection.html" title="Smart Connection">
+        <div class="card" html-content-file="courses/smart-connection.html" title="Smart Connection">
             <div class="title-overlay">
                 <img class="cardimage" src="assets/images/smart_connection_card.jpeg" draggable="false" />
                 <span class="card-title">Smart Connection</span>
             </div>
         </div>
-        <div class="card" html-content-file="/tobias/courses/smart-project.html" title="Smart Project">
+        <div class="card" html-content-file="courses/smart-project.html" title="Smart Project">
             <div class="title-overlay">
                 <img class="cardimage"
                     src="https://wopereis.group/wp-content/uploads/2024/07/foto-jubilaris-pensionado-5-1080x675.png"
@@ -51,19 +54,19 @@
                 <span class="card-title">Smart Project</span>
             </div>
         </div>
-        <div class="card" html-content-file="/tobias/courses/smart-technology.html" title="Smart Technology">
+        <div class="card" html-content-file="courses/smart-technology.html" title="Smart Technology">
             <div class="title-overlay">
                 <img class="cardimage" src="assets/images/smart_tech.jpeg" draggable="false" />
                 <span class="card-title">Smart Technology</span>
             </div>
         </div>
-        <div class="card" html-content-file="/tobias/courses/smart-business.html" title="Smart Business">
+        <div class="card" html-content-file="courses/smart-business.html" title="Smart Business">
             <div class="title-overlay">
                 <img class="cardimage" src="assets/images/tom_model.jpeg" draggable="false" />
                 <span class="card-title">Smart Business</span>
             </div>
         </div>
-        <div class="card" html-content-file="/tobias/courses/smart-me.html" title="Smart Me">
+        <div class="card" html-content-file="courses/smart-me.html" title="Smart Me">
             <div class="title-overlay">
                 <video class="cardimage" autoplay muted loop>
                     <source src="assets/videos/buig_robot.mp4" type="video/mp4">
