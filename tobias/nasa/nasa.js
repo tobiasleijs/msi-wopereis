@@ -1,71 +1,73 @@
 function nasarequested() {
     const baseUrl = 'https://api.nasa.gov/planetary/apod?api_key=';
     const apiKey = "OuM92MR4Cm0ZQ48XKhyEUJEiGCk1yu8zJlOYanfa";
-    const dateInput = document.querySelector("#datepicker");
-    const title = document.querySelector("#title");
-    const copyright = document.querySelector("#copyright");
     const mediaSection = document.querySelector("#media-section");
-    const information = document.querySelector("#description");
 
     const currentDate = new Date().toISOString().slice(0, 10);
 
-
-    const imageSection = `<a id="hdimg" href="" target="-blank">
-    <div class="image-div">
-    <img id="image_of_the_day" src="" alt="image-by-nasa">
-    </div>
-   </a>`
-
-    const videoSection = `<div class="video-div"> <iframe id="videoLink" src="" frameborder="0"></iframe></div>`
-
-    let newDate = "&date=" + dateInput.value + "&";
+    let dateQuery = "&date=" + currentDate + "&";
 
 
-    function fetchData() {
+
+    async function fetchData() {
         try {
-            fetch(baseUrl + apiKey + newDate)
-                .then(response => response.json())
-                .then(json => {
-                    console.log(json);
-                    diplaydata(json)
-                })
+            const response = await fetch(baseUrl + apiKey + dateQuery);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const json = await response.json();
+            console.log(json);
+            displaydata(json);
         } catch (error) {
-            console.log(error)
+            console.error("Fetch error: ", error);
         }
     }
 
-    function diplaydata(data) {
+    function displaydata(data) {
+        console.log("displaying data");
+        if (mediaSection) {
+            mediaSection.innerHTML = '';
 
-        title.innerHTML = data.title;
-
-        if (data.hasOwnProperty("copyright")) {
-            copyright.innerHTML = data.copyright;
+            if (data.media_type === "video") {
+                const videoDiv = document.createElement('div');
+                videoDiv.className = 'video-div';
+                const iframe = document.createElement('iframe');
+                iframe.id = 'videoLink';
+                iframe.src = data.url;
+                videoDiv.appendChild(iframe);
+                mediaSection.appendChild(videoDiv);
+                adjustWeatherApiHeight();
+                console.log("Video added");
+            } else if (data.media_type === "image" && data.url) {
+                const imageDiv = document.createElement('div');
+                imageDiv.className = 'image-div';
+                const img = document.createElement('img');
+                img.id = 'image_of_the_day';
+                img.src = data.url;
+                img.alt = 'image-by-nasa';
+                imageDiv.appendChild(img);
+                mediaSection.appendChild(imageDiv);
+                adjustWeatherApiHeight();
+                console.log("Image added");
+            } else {
+                console.log("Unsupported media type or missing URL");
+            }
         } else {
-            copyright.innerHTML = ""
+            console.error("mediaSection is not defined");
+            nasarequested();
         }
-
-        date.innerHTML = data.date;
-        dateInput.max = currentDate;
-        dateInput.min = "1995-06-16";
-
-        if (data.media_type == "video") {
-            mediaSection.innerHTML = videoSection;
-            document.getElementById("videoLink").src = data.url;
-
-        } else {
-            mediaSection.innerHTML = imageSection;
-            document.getElementById("hdimg").href = data.hdurl;
-            document.getElementById("image_of_the_day").src = data.url;
-        }
-        information.innerHTML = data.explanation
     }
     fetchData();
 }
 
-const dateInput = document.querySelector("#datepicker");
-dateInput.addEventListener('change', (e) => {
-    e.preventDefault();
-    nasarequested();
-})
+nasarequested();
 
-nasarequested().onload;
+function adjustWeatherApiHeight() {
+    var nasaApi = document.querySelector('.nasa-api');
+    var weatherApi = document.querySelector('.weather-api');
+
+    if (nasaApi && weatherApi) {
+        var nasaApiHeight = nasaApi.offsetHeight;
+        weatherApi.style.height = nasaApiHeight + 'px';
+    }
+}
