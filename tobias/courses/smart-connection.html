@@ -31,7 +31,8 @@
                 worden.
                 Voor het ophalen van data uit de API is een API-sleutel nodig, deze kun je aanvragen bij Nasa zelf.
                 Omdat de
-                groottes van de afbeeldingen en video's per dag nogal kunnen verschillen, heb ik ervoor gekozen om
+                groottes van de afbeeldingen en video's per dag nogal kunnen verschillen, heb ik ervoor gekozen om via
+                een JavaScript functie de
                 grootte van de weer api
                 gelijk te maken aan de grootte van de Nasa api. Dit zorgt voor een mooie UI.
             </p>
@@ -46,20 +47,22 @@
         <p>
             Voor het vak Smart Connection hebben we leren werken met html, css en JavaScript. Persoonlijk had ik al een
             klein beetje ervaring met html
-            en css, maar ik had nooit eerder gewerkt met JavaScript. Daarom heb ik me zelf bij dit vak proberen uit de
+            en css, maar ik had nooit eerder gewerkt met JavaScript. Daarom heb ik me zelf bij dit vak proberen uit te
             dagen door een aantal animaties
-            met javascript te maken. Zo heb ik bijvoorbeeld een animatie gemaakt waarbij je op de home pagina van de
-            website en van mijn portfolio
+            met JavaScript te maken. Zo heb ik bijvoorbeeld een animatie gemaakt waarbij je op de homepagina en op mijn
+            persoonlijke portfoliopagina
             de kaarten met foto's van links naar rechts kan slepen. Tegelijkertijd wordt de positie van de foto op de
             kaart ook met de sleep richting mee
             veranderd. Dit zorgt voor een 3D of parallax effect.
             <br>
             <br>
-            Daarnaast heb ik ook een modal gemaakt die je kan openen door op een kaart te klikken. In deze modal wordt
+            Daarnaast heb ik ook een pop-up venster gemaakt die je kan openen door op een kaart te klikken. In deze
+            modal wordt
             de html content van een vak getoond.
             Dit zorgt ervoor dat ik niet voor elk vak een nieuwe pagina hoef te maken, maar dat ik de content van de
             vakken in een html bestand kan zetten
-            en deze kan tonen in de modal. Dit zorgt ervoor dat een belangrijk principe van programmeren en dus ook
+            en deze kan tonen in het pop-up venster. Dit zorgt ervoor dat een belangrijk principe van programmeren en
+            dus ook
             webdevelopment wordt toegepast, namelijk DRY (Don't Repeat Yourself).
         </p>
         <img src="/tobias/assets/images/build_website.jpeg" alt="Building a website" class="website-image">
@@ -75,8 +78,7 @@
         margin: 48px 0;
     }
 
-    .api-row,
-    .website-section {
+    .api-row {
         display: flex;
         justify-content: space-between;
         position: relative;
@@ -109,9 +111,8 @@
     }
 
     .weather-api,
-    .nasa-api,
-    .website-image {
-        border: 1px solid white;
+    .nasa-api {
+        border: 2px solid white;
         width: 100%;
         border-radius: 16px;
         margin: 0 auto;
@@ -131,10 +132,18 @@
         border-radius: 16px;
     }
 
+    .website-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .website-image {
         width: 40%;
         margin: 0 auto;
-        object-fit: cover;
-        margin-left: 64px;
+        object-fit: contain;
+        margin-left: 48px;
+        border: 2px solid white;
+        border-radius: 16px;
     }
 </style>

@@ -61,6 +61,15 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', adjustWeatherApiHeight);
 });
 
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        const modal = document.querySelector("[data-modal]");
+        if (modal && modal.hasAttribute('open')) {
+            observer.observe(document.body, config);
+        }
+    }
+});
+
 
 
 function adjustWeatherApiHeight() {
@@ -79,6 +88,7 @@ function onMediaSectionAppear() {
     console.log("Media section appeared");
     nasarequested();
     adjustWeatherApiHeight();
+    setTimeout(adjustWeatherApiHeight, 2000);
 }
 
 // Create a MutationObserver instance

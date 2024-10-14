@@ -4,6 +4,7 @@
     width: 40vmin;
     height: 56vmin;
     background-color: rgb(30, 29, 29);
+    cursor: pointer;
 }
 
 .cardimage {
@@ -115,4 +116,45 @@
 
 dialog:focus {
     outline: none;
+}
+
+.title-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.title-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: 10px;
+}
+
+.card:hover .title-overlay::after,
+.card:hover .card-title {
+    opacity: 1;
+}
+
+.card-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 5;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
