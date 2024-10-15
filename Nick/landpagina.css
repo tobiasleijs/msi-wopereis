@@ -15,6 +15,43 @@ color: rgb(255, 255, 255);
 	margin-top:10px;
 }
 
+/*Dit is de footer voor de pagina's*/
+.footer {
+    background-color: #333; /* Donkere achtergrondkleur voor de footer */
+    color: white; /* Tekstkleur wit */
+    padding: 12px; /* Verticale padding */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Plaats de inhoud aan beide kanten */
+    align-items: center; /* Centreer verticaal */
+    max-width: 80%; /* Maximale breedte van de footer */
+    margin: 0 auto; /* Centraal op de pagina */
+    padding: 0 50px; /* Horizontale padding */
+}
+
+.home-link a {
+    color: white; /* Zorg ervoor dat de link wit is */
+    text-decoration: none; /* Verwijder de onderstreping van de link */
+    font-size: 18px; /* Tekstgrootte aanpassen */
+}
+
+.social-icons a {
+    margin-left: 20px; /* Afstand tussen de iconen */
+}
+
+.icon {
+    width: 24px; /* Breedte van de iconen */
+    height: 24px; /* Hoogte van de iconen */
+}
+
+
+
+
 .fotocarousel{
 width: 60%;
 margin: auto;
@@ -53,4 +90,35 @@ display: flex;
 				
 }
 
-/* Opmaak van de BTN-Group zit in de tekst verwerkt*
+/* Opmaak van de BTN-Group zit in de tekst verwerkt*/
+
+
+/*Opmaak van de inleiding en foto op Smart Business pagina*/
+.container2 {
+margin-left: 10px ;
+margin-right: 10px;
+
+}
+.image {
+	margin-left: 7.5%;
+	margin-bottom: 1%;
+}
+
+
+/*Twee kollommen op de Smart Business pagina*/
+.grid-container {
+    display: grid;
+	margin-left: 2%;
+	margin-right: 2%;
+    grid-template-columns: 1fr 1fr; /* Twee gelijke kolommen */
+    gap: 20px; /* Optionele ruimte tussen de kolommen */
+}
+.grid-column {
+    padding: 10px; /* Optionele binnenruimte */
+	border: 8px double rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
+	background-color: #0259a1;
+}
+
+
+
