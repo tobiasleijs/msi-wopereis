@@ -3,6 +3,7 @@ body{
 margin-left: 50px;
 margin-right: 50px;
 background-color:rgb(255, 255, 255);
+margin-bottom: 50px;
 }
 
 /* Dit is voor de blauwe box*/
@@ -15,43 +16,72 @@ color: rgb(255, 255, 255);
 	margin-top:10px;
 }
 
-/*Dit is de footer voor de pagina's*/
+/* Algemene styling voor de footer */
 .footer {
-    background-color: #333; /* Donkere achtergrondkleur voor de footer */
-    color: white; /* Tekstkleur wit */
-    padding: 12px; /* Verticale padding */
+    background-color: #333;
+    color: #0259a1;
+    width: 100%;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    height: 45px; /* Standaard kleine hoogte */
+    overflow: hidden;
+    transition: height 0.8s ease; /* Zorgt voor een vloeiende overgang in hoogte */
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between; /* Plaats de inhoud aan beide kanten */
-    align-items: center; /* Centreer verticaal */
-    max-width: 80%; /* Maximale breedte van de footer */
-    margin: 0 auto; /* Centraal op de pagina */
-    padding: 0 50px; /* Horizontale padding */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    visibility: hidden; /* Verberg de inhoud aanvankelijk */
+    opacity: 0; /* Onzichtbare inhoud in eerste instantie */
+    transition: opacity 0.8s ease; /* Vloeiende overgang van de zichtbaarheid */
 }
 
-.home-link a {
-    color: white; /* Zorg ervoor dat de link wit is */
-    text-decoration: none; /* Verwijder de onderstreping van de link */
-    font-size: 18px; /* Tekstgrootte aanpassen */
+/* Styling voor het pijltje boven de footer */
+.footer-toggle {
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
 }
 
-.social-icons a {
-    margin-left: 20px; /* Afstand tussen de iconen */
-}
-
+/* Iconen styling */
 .icon {
-    width: 24px; /* Breedte van de iconen */
-    height: 24px; /* Hoogte van de iconen */
+	padding: 4px;
+	margin: 4px;
+    width: 48px;
+    height: 48px;
+}
+
+/* Als de muis over de footer beweegt, maak hem groter */
+.footer:hover {
+    height: 80px; /* Verhoog de hoogte */
+}
+
+/* Maak de inhoud zichtbaar wanneer de footer wordt vergroot */
+.footer:hover .footer-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Verander het pijltje tijdens het uitklappen van de footer */
+.footer:hover .footer-toggle {
+    transform: translateX(-50%) rotate(180deg); /* Draai het pijltje */
 }
 
 
 
 
+
+/*Fotocarousel*/
 .fotocarousel{
 width: 60%;
 margin: auto;
