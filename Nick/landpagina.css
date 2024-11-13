@@ -1,3 +1,5 @@
+
+/* Opmaak van de Landpagina*/ /*-------------------------------------------------------------------------------------------------------------------------------------*/
 /* Dit is het bestand maar dan in het algemeen */
 body{
 margin-left: 50px;
@@ -5,7 +7,6 @@ margin-right: 50px;
 background-color:rgb(255, 255, 255);
 margin-bottom: 50px;
 }
-
 /* Dit is voor de blauwe box*/
 .box-2{
 background-color: #0259a1;
@@ -16,6 +17,7 @@ color: rgb(255, 255, 255);
 	margin-top:10px;
 }
 
+/* Opmaak van de Footer */ /*-------------------------------------------------------------------------------------------------------------------------------------*/
 /* Algemene styling voor de footer */
 .footer {
     background-color: #333;
@@ -28,7 +30,6 @@ color: rgb(255, 255, 255);
     overflow: hidden;
     transition: height 0.8s ease; /* Zorgt voor een vloeiende overgang in hoogte */
 }
-
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -40,7 +41,6 @@ color: rgb(255, 255, 255);
     opacity: 0; /* Onzichtbare inhoud in eerste instantie */
     transition: opacity 0.8s ease; /* Vloeiende overgang van de zichtbaarheid */
 }
-
 /* Styling voor het pijltje boven de footer */
 .footer-toggle {
     text-align: center;
@@ -52,7 +52,6 @@ color: rgb(255, 255, 255);
     transform: translateX(-50%);
     color: white;
 }
-
 /* Iconen styling */
 .icon {
 	padding: 4px;
@@ -60,34 +59,20 @@ color: rgb(255, 255, 255);
     width: 48px;
     height: 48px;
 }
-
 /* Als de muis over de footer beweegt, maak hem groter */
 .footer:hover {
     height: 80px; /* Verhoog de hoogte */
 }
-
 /* Maak de inhoud zichtbaar wanneer de footer wordt vergroot */
 .footer:hover .footer-content {
     visibility: visible;
     opacity: 1;
 }
-
 /* Verander het pijltje tijdens het uitklappen van de footer */
 .footer:hover .footer-toggle {
     transform: translateX(-50%) rotate(180deg); /* Draai het pijltje */
 }
 
-
-
-
-
-/*Fotocarousel*/
-.fotocarousel{
-width: 60%;
-margin: auto;
-border: 8px solid #0259a1
-
-}
 
 /* Inleiding*/
 .box-1{
@@ -123,6 +108,15 @@ display: flex;
 /* Opmaak van de BTN-Group zit in de tekst verwerkt*/
 
 
+/*Smart Business Opmaak */ /*-------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Fotocarousel*/
+.fotocarousel{
+    width: 60%;
+    margin: auto;
+    border: 8px solid #0259a1
+}
+
 /*Opmaak van de inleiding en foto op Smart Business pagina*/
 .container2 {
 margin-left: 10px ;
@@ -148,6 +142,51 @@ margin-right: 10px;
 	border: 8px double rgb(255, 255, 255);
 	color: rgb(255, 255, 255);
 	background-color: #0259a1;
+}
+
+
+
+/*Smart Connection Opmaak*/ /*-------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Algemene styling voor de container */
+.collapsible-container {
+    margin: 5px auto; /* Ruimte tussen de secties */
+    border: 1px solid #333;
+    padding: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+    width: 95%;
+}
+
+/* Verborgen checkbox */
+.collapsible-checkbox {
+    display: none;
+}
+
+/* Styling voor het label */
+.collapsible-label {
+    display: block;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+/* Styling voor de inhoud van de uitklapbare sectie */
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background-color: #fff;
+    padding: 0 10px;
+    border-top: 1px solid #333;
+}
+
+/* Wanneer de checkbox is aangeklikt, toon de inhoud */
+.collapsible-checkbox:checked + .collapsible-label + .collapsible-content {
+    max-height: 2000px; /* Pas deze waarde aan op basis van de verwachte tekstlengte */
+    padding: 10px;
 }
 
 
