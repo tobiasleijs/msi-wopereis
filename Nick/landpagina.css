@@ -189,5 +189,49 @@ margin-right: 10px;
     padding: 10px;
 }
 
+/* Smart Technologie Opmaak*/ /*-------------------------------------------------------------------------------------------------------------------------------------------*/
+.icoontjes {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .icon-link {
+    position: absolute;
+    top: 180px;
+    transform: translateY(-50%);
+    text-decoration: none;
+  }
+  .icon-link.left {
+    left: 12%;
+  }
+  .icon-link.right {
+    right: 12%;
+  }
+  .icon-link img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 1s, box-shadow 0.3s;}
 
-
+    .icon-link.left img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 10px #0259a1; /* Schaduw voor linker icoon bij hover */
+      }
+      .icon-link.right img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 10px #ff5733; /* Schaduw voor rechter icoon bij hover */
+      }
+      
