@@ -108,13 +108,13 @@ display: flex;
 /* Opmaak van de BTN-Group zit in de tekst verwerkt*/
 
 
-/*Smart Business Opmaak */ /*-------------------------------------------------------------------------------------------------------------------------------------*/
+/*Smart Works Opmaak */ /*-------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*Fotocarousel*/
 .fotocarousel{
     width: 60%;
     margin: auto;
-    border: 8px solid #0259a1
+    border: 8px double #0259a1
 }
 
 /*Opmaak van de inleiding en foto op Smart Business pagina*/
@@ -143,6 +143,11 @@ margin-right: 10px;
 	color: rgb(255, 255, 255);
 	background-color: #0259a1;
 }
+
+
+
+
+
 
 
 
@@ -209,7 +214,7 @@ margin-right: 10px;
   }
   .icon-link {
     position: absolute;
-    top: 180px;
+    top: 155px;
     transform: translateY(-50%);
     text-decoration: none;
   }
