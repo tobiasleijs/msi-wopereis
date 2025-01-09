@@ -124,10 +124,67 @@ body {
     background-image: url('assets/wopereis_wallpaper.png');
     height: 500px;
 }
+#robot-photo-container {
+    background-image: url('assets/robot.jpeg');
+    height: 500px;
+}
 
 #dmaic-photo-container {
     background-image: url('assets/DMAIC.jpeg');
     height: 500px;
+}
+#bouwbezoek-photo-container {
+    background-image: url('assets/bouwbezoek.jpeg');
+    height: 500px;
+}
+#probleemboom-photo-container {
+    background-image: url('assets/probleemboom.jpeg');
+    height: 500px;
+}
+#mal-hijsen-photo-container {
+    background-image: url('assets/mal_hijsen.jpeg');
+    height: 500px;
+}
+#gaasmat-design-photo-container {
+    background-image: url('assets/gaasmat_design.png');
+    height: 500px;
+}
+.wide-img {
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+}
+
+
+.nick-video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 500px;
+    margin-top: 40px;
+}
+
+.nick-background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    filter: blur(20px);
+    z-index: 1;
+}
+
+.nick-foreground-video {
+    position: relative;
+    z-index: 2;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 
