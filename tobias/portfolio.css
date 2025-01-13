@@ -232,3 +232,17 @@ dialog:focus {
     font-size: 2.5rem;
     font-weight: 700;
 }
+
+.smart-me-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.smart-me-table th,
+.smart-me-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+.smart-me-table {
+    margin-bottom: 40px;
+}
