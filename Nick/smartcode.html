@@ -2,71 +2,129 @@
 <html>
 
 <head>
-   <!--Linkje van Booststrap-->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-   <!--Nieuwe Link voor CSS Style-->
-   <link rel="stylesheet" href="landpagina.css">
-   <title>
-      Nick Daanje - Landpagina
-   </title>
+    <!--Linkje van Booststrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Nieuwe Link voor CSS Style-->
+    <link rel="stylesheet" href="landpagina.css">
+    <title>
+        Nick Daanje - Landpagina
+    </title>
 </head>
 
 <!--Begin van de pagina-->
 
 <body>
-   <div class="box-2">
-      <h1>
-         <center> Smart Code</center>
-      </h1>
-   </div>
- 
-<!--Tekst nog verschuiven naar rechts klein stukje-->
-   <div class="container2">
-    <h4>Inleiding</h4>
-    <p>Tekst moet hier uiteindelijk komen</p>
-   
-    <p>Deze les kwam gastspreker Paul Kalis ons wat vertellen over het TOM3-model. Hij vertelde dat het BMC een
-        globaal model is en dat TOM3 diepere inzichten geeft in de organisatie. Dit was een nieuw model voor
-        mij. Jammer genoeg was dit model wederom niet echt toepasbaar op onze opdracht. Dit komt doordat het
-        probleem al duidelijk geformuleerd was, namelijk dat er een lasrobot van en paar ton in de productie staat
-        die zelden gebruikt wordt. Wij hebben het model toch ingevuld met de kennis die we hadden en het resultaat
-        is hieronder te zien:</p>
+    <div class="box-2">
+        <h1>
+            <center> Smart Code</center>
+        </h1>
+    </div>
 
-     <!-- Afbeelding met opmaak -->
-     <div style="text-align: center; margin: 20px 0;">
-        <img src="Foto/tom3.JPG" alt="TOM3-Model"
-           style="border: 8px double #0259a1; padding: 5px; max-width: 45%; height: auto;">
-     </div>
-
-     <p>Het model heeft mij wel aan het denken gezet, ligt het nou aan de machine zelf, zit er iets in de tactiek
-        dat niet klopt en hebben de medewerkers wel de nodige kennis om met de robot te werken. Dit zijn vragen die
-        we uiteindelijk onderzocht hebben en zo zijn we tot een oplossing gekomen. De machine is namelijk
-        gespecialiseerd in massawerk en Wopereis levert maatwerk. Het is tactisch niet goed ingericht om maatwerk te
-        produceren op een massamachine. Daarnaast heeft de huidige machine operator onvoldoende kennis om optimaal
-        met de machine te werken, dit zorgt voor lange omsteltijden. Misschien dat ik onbewust toch bezig was met
-        TOM3 om de vragen te beantwoorden die ik kreeg bij dit model.
-        <!--(Leerdoel) Aan het einde van de les een TOM-model ingevuld te hebben die aansluit op Wopereis.-->
-
-   </div>
+    <!--Tekst nog verschuiven naar rechts klein stukje-->
+    <div class="container2">
+        <div class="smartcode">
+            <div>
+                <h4>Inleiding</h4>
+                <p> Het vak Smart Technologie begon met het maken van een <b>IoT-schakeling</b> die de lichtwaardes en
+                    de
+                    vochtigheid van een plant zal reguleren. De eerste les was gelijk Studio Visual Code, iets waar ik
+                    nog geen ervaring mee had en vanaf een nulpunt moest aanleren. Dit is dan ook mijn eerste
+                    leerontwikkeling, programmeren met C++ (Embedded). Het koste veel moeite en ik heb mezelf vaak de
+                    vraag gesteld: “Hoe gaat ik dit nou voor mekaar krijgen”, maar uiteindelijk is het toch gelukt en
+                    heb ik na de eerste les een dimmend lichtje geprogrammeerd die aangaat wanneer de sensor minder tot
+                    geen licht meer kan scannen. Rechts van deze alinea is het resultaat te zien. Later heb ik nog
+                    andere sensoren geprogrammeerd en aangesloten op de ESP32 chip. Deze sensoren verzamelen data en in
+                    de tweede les heb ik geleerd hoe ik de verzamelde informatie uit de aangesloten sensoren kan
+                    uploaden naar de Cloud. Hier gebruikte we een Influx-databaseserver voor. Aan het einde van de les
+                    heb ik geleerd hoe ik een code aan kan maken die de verzamelde info kan uploaden naar de Cloud.
+                    Hiermee kan ik uiteindelijk het plantenbakje automatisch verzorgen. Deze dataserver kan
+                    gevisualiseerd worden als is een dashboard. Hoe dat werkt heb ik geleerd in de Smart Connection
+                    lessen en daar is dan ook mijn dashboard in te zien. Hier een <a href="smartcon.html">hyperlink</a>
+                    naar de pagina van het dashboard.</p>
 
 
+            </div>
+            <div class="centered-content">
+                <video width="auto" height="360" controls>
+                    <source src="/Nick/Foto/Programmeren/Brandendlampje.MOV" type="video/mp4">
+                    Je browser ondersteunt geen HTML5 video.
+                </video>
+            </div>
+        </div>
+
+        <div class="container2">
+            <p>
+            <h5>Printed circuit board</h5></p>
+        </div>
+        <div class="smartcode">
+            <!--<div class="centered-content">
+                <img src="/Nick/Foto/Programmeren/Data_INFLUX.png" alt="Afbeelding van Influx en code" />
+            </div> -->
+            <div class="centered-content row">
+                <img src="/Nick/Foto/Programmeren/elekschema.png" alt="Elektrisch schema" class="side-by-side" />
+                <img src="/Nick/Foto/Programmeren/pcboard.png" alt="Printplaatje" class="side-by-side" />
+            </div>
+            <p>In de derde les heb ik geleerd hoe ik een printed circuit board kan maken. De app waarmee ik gewerkt heb is
+                autodesk Eagle. In deze app heb ik geleerd hoe ik een elektrisch schema kan maken en daarna een design te
+                ontwerpen met alle componenten erin. De stappen waren wederom lastig om te volgen aan het begin, maar
+                uiteindelijk heb ik het onder de knie gekregen en is op de afbeelding links van deze alinea het
+                resultaat te zien. Later heb ik deze PCB nog gesoldeerd en dat kun je lezen in de volgende alinea.</p>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="smartcode">
+            <div>
+                <h5>Solderen</h5>
+                <p>Het PCB’tje werd besteld en toen deze binnenkwam mochten we deze zelf solderen. Ik heb weinig
+                    ervaring met solderen, ik heb het alleen een paar keer gedaan in groep 8 tijdens knutsellessen. Dus
+                    een kleine basis. In het filmpje rechts van deze alinea is een timelaps te zien van hoe ik en paar
+                    stukjes soldeer aan mijn pcb. </p>
+
+                <p>
+                <h5>Conclusie</h5>
+                Tijdens de module Smart Technologie heb ik dus veel nieuwe vaardigheden aangeleerd. In de <b><i>eerste
+                        les</i></b> heb ik de basis van programmeren in Studio Visual Code onder de knie gekregen en hoe
+                ik sensoren op de ESP32 kan aansluiten Dit gaf me een beter inzicht in hoe technologie werkt, ondanks
+                dat ik hier geen voorkennis van had.
+                In de <b><i>tweede les</i></b> leerde ik om gegevens van sensoren naar de Cloud te uploaden met behulp
+                van de Influx-databaseserver.
+                De <b><i>derde les</i></b> ging over het ontwerpen van een printed circuit board (PCB) in Autodesk
+                Eagle, waarbij ik een elektrisch schema en een ontwerp voor een fysieke printplaat maakte. Dit heeft me
+                duidelijk gemaakt hoe indrukwekkend zulke kleine chips eigenlijk wel niet zijn.
+                Deze module heeft me niet alleen technische kennis opgeleverd, maar ook laten zien hoe belangrijk
+                doorzettingsvermogen is bij het leren van nieuwe vaardigheden. Want al had ik dat niet gehad, dan was me
+                dit allemaal ook niet gelukt
+                </p>
+
+            </div>
+            <div class="centered-content">
+                <video width="500" height="auto" controls>
+                    <source src="/Nick/Foto/Programmeren/Solderen.MOV" type="video/mp4">
+                    Je browser ondersteunt geen HTML5 video.
+                </video>
+            </div>
+        </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!--Footer voor de pagina's-->
+        <footer class="footer">
+            <div class="footer-toggle">
+                &#x25B2;
+            </div>
+            <div class="footer-content">
+                <div class="Home">
+                    <a href="smarttech.html">Home</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/nick-daanje-674b46226" target="_blank">
+                        <img src="Foto//linkedin.png" alt="LinkedIn" class="icon">
+                    </a>
+                    <a href="https://www.instagram.com/nickdaanje_/" target="_blank">
+                        <img src="Foto//instagram.png" alt="Instagram" class="icon">
+                    </a>
+                </div>
+            </div>
+        </footer>
+</body>

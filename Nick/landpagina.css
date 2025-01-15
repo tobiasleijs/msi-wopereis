@@ -29,6 +29,7 @@ color: rgb(255, 255, 255);
     height: 45px; /* Standaard kleine hoogte */
     overflow: hidden;
     transition: height 0.8s ease; /* Zorgt voor een vloeiende overgang in hoogte */
+    z-index: 999999;
 }
 .footer-content {
     display: flex;
@@ -114,6 +115,7 @@ display: flex;
 .fotocarousel{
     width: 60%;
     margin: auto;
+    margin-bottom: 20px;
     border: 8px double #0259a1
 }
 
@@ -125,7 +127,7 @@ margin-right: 10px;
 }
 .image {
 	margin-left: 7.5%;
-	margin-bottom: 1%;
+	margin-bottom: 5%;
 }
 
 
@@ -143,12 +145,6 @@ margin-right: 10px;
 	color: rgb(255, 255, 255);
 	background-color: #0259a1;
 }
-
-
-
-
-
-
 
 
 /*Smart Connection Opmaak*/ /*-------------------------------------------------------------------------------------------------------------------------------------*/
@@ -240,3 +236,91 @@ margin-right: 10px;
         box-shadow: 0 6px 10px #ff5733; /* Schaduw voor rechter icoon bij hover */
       }
       
+      .centered-video {
+        text-align: center;
+        margin-top: 490px; /* Zorgt voor ruimte boven de video */
+    }
+    
+    .centered-video video {
+        border: 4px solid #0259a1; /* Kaderkleur (groen) */
+        border-radius: 10px; /* Afgeronde hoeken */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtiele schaduw */            
+        max-width: 100%; /* Zorgt dat de video responsief blijft */
+        height: auto;
+        }
+    
+
+    /*Code van Smart Code - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ------------------------------------------ */
+    .centered-content {
+        display: flex;
+        justify-content: center; /* Centreert de inhoud horizontaal */
+        gap: 20px; /* Ruimte tussen de afbeeldingen */
+        margin: 20px 0; /* Ruimte boven en onder de rij */
+    }
+    
+    .centered-content img {
+        max-width: 45%;
+        height: auto;
+        display: inline-block; /* Zorgt dat de afbeelding gecentreerd blijft */
+    }
+    
+    .row {
+        display: flex;
+        justify-content: center; /* Centreert de afbeeldingen in een rij */
+        gap: 20px; /* Ruimte tussen de twee afbeeldingen */
+    }
+    
+    .side-by-side {
+        border: 4px solid #0259a1; /* Kleur van het kader (groen) */
+        border-radius: 10px; /* Afgeronde hoeken */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schaduw voor diepte-effect */
+        max-width: 45%; /* Zorgt dat de afbeeldingen niet te breed zijn */
+        height: auto; /* Behoudt de beeldverhouding */
+        transition: transform 1.50s ease; /* Animatie bij hover */
+        transform-origin: center center; /* Zorgt dat de vergroting gecentreerd blijft */
+    }
+    .side-by-side:hover {
+        transform: scale(2.55); /* Vergroot afbeelding bij hover */
+
+    }
+
+    .smartcode{
+display: flex;
+flex-direction: row;
+gap: 40px;
+align-items: center;
+padding: 15px;
+margin-bottom: 5px;
+    }
+
+    .mooiman-content {
+        display: flex;
+        justify-content: center; /* Centreert de inhoud horizontaal */
+        gap: 20px; /* Ruimte tussen de video en de afbeelding */
+        margin: 20px 0; /* Ruimte boven en onder de rij */
+        align-items: center; /* Zorgt dat video en afbeelding worden uitgelijnd */
+    }
+    
+    .mooiman-video {
+        border: 4px solid #0259a1; /* Kleur van het kader (groen) */
+        border-radius: 10px; /* Afgeronde hoeken */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schaduw voor diepte-effect */
+        width: auto; /* Breedt van de video */
+        height: 440px; /* Hoogte van de video */
+        transition: transform 1.5s ease; /* Smooth animatie bij hover */
+    }
+    
+    .mooiman-image {
+        border: 4px solid #0259a1; /* Kleur van het kader (groen) */
+        border-radius: 10px; /* Afgeronde hoeken */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schaduw voor diepte-effect */
+        height: 440px; /* Pas hoogte aan de video aan */
+        width: auto; /* Houd de breedte proportioneel */
+        transition: transform 1.5s ease; /* Smooth animatie bij hover */
+    }
+    
+    .mooiman-video:hover,
+    .mooiman-image:hover {
+        transform: scale(1.05); /* Vergroot video/afbeelding bij hover */
+    }
+    
