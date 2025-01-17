@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+
+    <title>Homepagina</title>
+
+    <link rel="stylesheet" href="website.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="smartme.html">Smart me</a></li>
+                            <li><a class="dropdown-item" href="smartconect.html">Smart connection</a></li>
+                            <li><a class="dropdown-item" href="smartbusiness.html">Smart business</a></li>
+                            <li><a class="dropdown-item" href="smarttechnology.html">Smart technology</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="nasa.html">Nasa</a></li>
+                            <li><a class="dropdown-item" href="weather.html">Aaltense weer</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+    <p>
+        <b>
+            <h2>Smart technology</h2>
+        </b>
+        Vind u planten water geven ook zo saai en gaan u planten ook al na een paar weken dood. Dan hebben wij bij de
+        minor smart industry de oplossing voor u. Tijdens de minor wordt een automatisch plantwateringsysteem ontwikkeld
+        die toegepast kan worden voor iedere plant. In de volgende tekstgedeeltes wordt uitgelegd hoe ik dit heb
+        toegepast met een demonstratie.
+    </p>
+
+    <p>
+    <h3>Hardware</h3>
+    Om de plant te voorzien van water zijn diverse hardware componenten nodig. Namelijk: ESP32, pomp, vochtsensor,
+    luchtvochtigheidssensor, vochtsensor, lichtsensor, relay, RF transistor en de batterij. Door middel van de
+    vochtsensor wordt de hoeveelheid vocht in de plantenbak gedetecteerd. De lichtsensor meet de lichtintensiteit. Op
+    basis van deze gegevens kan de geprogrammeerde ESP32 door gebruik van de relay en transistor, water pompen wanneer
+    nodig en/of een lamp aandoen.
+    </p>
+
+    <p>
+    <h3>Programmeren</h3>
+    Om de hardware te kunnen laten werken zoals het moet is er een code nodig die op de ESP32 gezet kan worden. De
+    eerste stap was om de hardware te testen in het programmeer programma Visual Studio Code. Alle hardware componenten
+    worden individueel getest. Dit om later een overzichtelijke code te kunnen schrijven en om de werking van de
+    componenten te realiseren.
+
+    De code is opgebouwd uit drie segmenten, namelijk de bibliotheek, void setup en de void loop. In de bibliotheek
+    worden variabelen en functies gerealiseerd. In de void setup wordt de geschreven code maar eenmalig uitgevoerd aan
+    de start van het programma. Dit kan bijvoorbeeld het configureren van aansluitingen zijn. In de void loop wordt de
+    geschreven code meermalig uitgevoerd. Dit zijn bijvoorbeeld de hoeveelheid vocht meten door de vochtsensor of de
+    lichtintensiteit meten door de lichtsensor.
+
+    </p>
+    <h3>PCB</h3>
+    Om de componenten aan te sluiten wordt er gebruik gemaakt van een PCB. Op de PCB is er de mogelijkheid om de
+    transistor, vochtsensor, luchtvochtsensor, relay en lichtsensor aan te sluiten. Op deze manier kan de ESP32 de
+    componenten aansluiten. De componenten zijn bevestigd door middel van solderen
+    <center><img src="assets/PCB.png" width="50%"/></center>
+    </p>
+    <h3>Componentenbakje</h3>
+    Om alle componenten op een handige manier op te bergen is er een componentenbakje ontwerpt. In dit bakje bevinden zich alle componenten op de pomp en vochtsensor na. Het componentenbakje is uitgeprint in het FABlab op de HAN. Het design is gemaakt in het programma Solidworks.
+    <center><img src="assets/Componentenbakje.png" width="50%"/></center>
+    </p>
+    <h3>Demonstratie</h3>
+    <center><video src="assets/demonstratie.mp4" width="50%"controls autoplay muted></video></center>
+    </p>
+    <h3>Reflectie</h3>
+    Tijdens het proces heb ik geleerd hoe simpele LOT-schakelingen in elkaar zitten en hoe deze geprogrammeerd worden.
+    Voor de minor had ik nog geen ervaring met programmeren, op het programma Matlab na. Ondanks dat dit niet mijn
+    expertise is en ik later er hoogstwaarschijnlijk niet zelf mee ga werken kan ik wel dankzij deze tak van de minor
+    een sneller overzicht hebben van elektronische systemen. Wanneer ik in een bestaande code zou werken kan ik deze
+    zelf makkelijker begrijpen en benodigde veranderingen toebrengen.
+
+    </p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    </div>
+</body>
+
+</html>
