@@ -1,10 +1,17 @@
 const track = document.getElementById("image-track");
 
+function isModalVisible() {
+    const modal = document.querySelector("[data-modal]");
+    return modal && modal.hasAttribute('open');
+}
+
 window.onmousedown = e => {
+    if (isModalVisible()) return;
     track.dataset.mouseDownAt = e.clientX;
 }
 
 window.onmousemove = e => {
+    if (isModalVisible()) return;
     if (track.dataset.mouseDownAt === "0") return;
     const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
         maxDelta = window.innerWidth / 2;
@@ -32,6 +39,7 @@ window.onmouseup = () => {
 }
 
 window.onwheel = e => {
+    if (isModalVisible()) return;
     const scrollDelta = e.deltaY,
         maxDelta = window.innerHeight;
     const percentage = (scrollDelta / maxDelta) * -100,
