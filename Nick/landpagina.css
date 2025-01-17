@@ -126,8 +126,8 @@ margin-right: 10px;
 
 }
 .image {
-	margin-left: 7.5%;
-	margin-bottom: 5%;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 
@@ -238,7 +238,7 @@ margin-right: 10px;
       
       .centered-video {
         text-align: center;
-        margin-top: 490px; /* Zorgt voor ruimte boven de video */
+        margin-top: 640px; /* Zorgt voor ruimte boven de video */
     }
     
     .centered-video video {
